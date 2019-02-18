@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome to Firebase Hosting</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/5.8.3/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/5.8.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/5.8.3/firebase-database.js"></script>
+    <script defer src="/__/firebase/5.8.3/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/5.8.3/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+
+    <style media="screen">
+      .hidden {
+        display: none;
+      }
+      body {
+        background: #eceff1;
+        color: rgba(0, 0, 0, 0.87);
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      div.card-content.min-height {
+        min-height: 17rem;
+      }
+      .card-image {
+        background-image: url("http://cdn.shopify.com/s/files/1/2480/5492/products/055_mug_swear_jar_1200x1200.jpg?v=1509223481");
+        background-size: 100% auto;
+        background-position: bottom;
+        min-height: 19rem;
+      }
+      .card-title {
+        background: linear-gradient(to right, #00000087, #252323);
+      }
+      #messText {
+        min-height: 8rem;
+      }
+      nav a.brand-logo {
+        font-size: 1.8rem;
+        font-weight: 100;
+        padding: 0px 1em;
+      }
+      form {
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper deep-purple">
+        <a href="#!" class="brand-logo">Clean Comments</a>
+
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="sass.html"
+              ><i class="material-icons left">search</i>Search Comments</a
+            >
+          </li>
+          <li>
+            <a href="badges.html"
+              ><i class="material-icons right">view_module</i>View all
+              comments</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="row">
+      <div class="col s10 m8 l5 offset-s1 offset-m2 offset-l1">
+        <div class="card">
+          <div class="card-image">
+            <!-- <img
+              src="http://cdn.shopify.com/s/files/1/2480/5492/products/055_mug_swear_jar_1200x1200.jpg?v=1509223481"
+            /> -->
+            <span class="card-title">Curse, Swear, Shout..I will clean it</span>
+          </div>
+          <div class="card-content min-height">
+            <form class="col s12">
+              <div class="input-field col s12">
+                <textarea id="messText" class="materialize-textarea"></textarea>
+                <label for="messText">Textarea</label>
+              </div>
+            </form>
+
+            <a class="waves-effect waves-light btn col s12 pulse" id="sendMess"
+              ><i class="material-icons right">add</i>Add Message</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="card col s10 m8 l5 offset-s1 offset-m2 hidden ">
+        <ul class="collection hidden" id="modified">
+          <!-- <li class="collection-item">Alvin</li>
+                      <li class="collection-item">Alvin</li>
+                      <li class="collection-item">Alvin</li>
+                      <li class="collection-item">Alvin</li> -->
+        </ul>
+      </div>
+    </div>
+
+    <footer class="page-footer deep-purple">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Text Sanitizer</h5>
+            <p class="grey-text text-lighten-4">
+              Firebase Cloud Functions and Realtime Database.
+            </p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2014 Copyright Text
+          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="/writeMessage.js"></script>
+  </body>
+</html>
